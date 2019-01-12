@@ -1,0 +1,31 @@
+.banner {
+	background-image: url("imgs/code_banner.png");
+	background-attachment: fixed;
+
+	width: 100%;
+	min-height: 250px;
+}
+
+.banner-header {
+	padding-top: 2em !important;
+}
+
+.ui.container {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.section-content {
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+}
+
+#menu-bar {
+	box-shadow: 0px 2px 5px #aaa;
+	border-radius: 0px;
+}
+
+#page-segment {
+	min-height: 1000px;
+}
