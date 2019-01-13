@@ -142,20 +142,20 @@ var coop_page_template = `
 			<h4>Co-op Work Terms</h4>
 		</div>
 		<div class="section-content">
-			<p>Below is a list of my past work terms. Click the link to view its co-op report.</p>
-			<div class="ui large relaxed list">
-			  	<div class="item">
+			<p>Below is a list of my past work terms. Click the item to view its co-op report.</p>
+			<div class="ui large relaxed selection list">
+			  	<a class="item" href="https://mhogar.github.io/CoopWebsite">
 				    <div class="content">
-				      <a class="header" href="https://mhogar.github.io/CoopWebsite">Camis - Summer (May to August) 2018</a>
+				      <div class="header">Camis - Summer (May to August) 2018</div>
 				      <div class="description">Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request.</div>
 				    </div>
-			  	</div>
-			  	<div class="item">
+			  	</a>
+			  	<a class="item" href="https://mhogar.github.io/CoopWebsite2">
 				    <div class="content">
-				      <a class="header" href="https://mhogar.github.io/CoopWebsite2">Tulip Retail - Fall (September to December) 2018</a>
+				      <div class="header">Tulip Retail - Fall (September to December) 2018</div>
 				      <div class="description">Implemented new features for the clienteling app. Primarily worked on the back-end, creating endpoints and database migrations.</div>
 				    </div>
-			  	</div>
+			  	</a>
 			</div>
 		</div>
 	</div>
