@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
   <head>
+  	<title>Ryan Stamp</title>
+
   	<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   	<link rel="stylesheet" type="text/css" href="style.css">
@@ -28,13 +30,14 @@
 	    		<i class="github icon"></i> GitHub
 	    	</a>
 			</div>
-	  	<transition
-		    name="page-content-transitions"
-		    enter-active-class="animated fadeInRight fast"
-		    leave-active-class="animated fadeOutRight fast"
-		    mode="out-in"
-			>
-		  	<component v-bind:is="page"></component>
+		  	<transition
+			    name="page-content-transitions"
+			    v-on:enter="onPageSwitch"
+			    enter-active-class="animated fadeInRight fast"
+			    leave-active-class="animated fadeOutRight fast"
+			    mode="out-in"
+				>
+			  	<component v-bind:is="page"></component>
 			</transition>
 		</div>
   	</div>

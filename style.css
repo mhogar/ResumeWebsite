@@ -11,17 +11,12 @@
 }
 
 .ui.container {
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .section-content {
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-bottom: 2em;
-}
-
-#menu-bar {
-	box-shadow: 0px 2px 5px #aaa;
-	border-radius: 0px;
 }
