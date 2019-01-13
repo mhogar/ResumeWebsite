@@ -1,5 +1,5 @@
 .banner {
-	background-image: url("imgs/code_banner.png");
+	background-image: url("imgs/banner.jpg");
 	background-attachment: fixed;
 
 	width: 100%;
@@ -7,7 +7,8 @@
 }
 
 .banner-header {
-	padding-top: 2em !important;
+	padding-top: 1em !important;
+	font-size: 5em !important;
 }
 
 .ui.container {
