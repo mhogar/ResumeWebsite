@@ -98,10 +98,10 @@ var project_page_template = `
 					</div>
 				</div>
 				<div class="extra content">
-					<div class="ui label">Rails</div>
-					<div class="ui label">Ruby</div>
-					<div class="ui label">HTML</div>
-					<div class="ui label">CSS</div>
+					<div class="ui label rails">Rails</div>
+					<div class="ui label ruby">Ruby</div>
+					<div class="ui label html">HTML</div>
+					<div class="ui label css">CSS</div>
 				</div>
 			</div>
 			<div class="ui fluid card">
@@ -129,7 +129,7 @@ var project_page_template = `
 					</div>
 				</div>
 				<div class="extra content">
-					<div class="ui label">C#</div>
+					<div class="ui label csharp">C#</div>
 				</div>
 			</div>
 		</div>
@@ -144,13 +144,13 @@ var coop_page_template = `
 		<div class="section-content">
 			<p>Below is a list of my past work terms. Click the item to view its co-op report.</p>
 			<div class="ui large relaxed selection list">
-			  	<a class="item" href="https://mhogar.github.io/CoopWebsite">
+			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite">
 				    <div class="content">
 				      <div class="header">Camis - Summer (May to August) 2018</div>
 				      <div class="description">Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request.</div>
 				    </div>
 			  	</a>
-			  	<a class="item" href="https://mhogar.github.io/CoopWebsite2">
+			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite2">
 				    <div class="content">
 				      <div class="header">Tulip Retail - Fall (September to December) 2018</div>
 				      <div class="description">Implemented new features for the clienteling app. Primarily worked on the back-end, creating endpoints and database migrations.</div>

@@ -18,14 +18,16 @@
   	<div id="page" class="ui container">
 	  	<div class="ui basic segment">
 			<div class="ui left attached rail">
-	    	<div class="ui vertical pointing menu">
-	    		<a id="home-item" class="item active" v-on:click="menuItemClicked('home')">Home</a>
-				  <a id="projects-item" class="item" v-on:click="menuItemClicked('projects')">Projects</a>
-				  <a id="coop-item" class="item" v-on:click="menuItemClicked('coop')">Co-op Work Terms</a>
-	    	</div>
-	    	<a class="ui labeled icon button" href="https://github.com/mhogar">
-	    		<i class="github icon"></i> GitHub
-	    	</a>
+				<div class="ui basic segment">
+			    	<div class="ui vertical pointing menu">
+			    		<a id="home-item" class="item active" v-on:click="menuItemClicked('home')">Home</a>
+						  <a id="projects-item" class="item" v-on:click="menuItemClicked('projects')">Projects</a>
+						  <a id="coop-item" class="item" v-on:click="menuItemClicked('coop')">Co-op Work Terms</a>
+			    	</div>
+			    	<a class="ui labeled icon button" href="https://github.com/mhogar">
+			    		<i class="github icon"></i> GitHub
+			    	</a>
+			    </div>
 			</div>
 		  	<transition
 			    name="page-content-transitions"

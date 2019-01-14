@@ -14,10 +14,36 @@
 .ui.container {
 	margin-top: 2em;
 	margin-bottom: 2em;
+	max-width: 800px !important;
 }
 
 .section-content {
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-bottom: 2em;
+}
+
+.ui.label.html {
+	background-color: #F1662A;
+	color: #FFFFFF;
+}
+
+.ui.label.css {
+	background-color: #33A9DC;
+	color: #FFFFFF;
+}
+
+.ui.label.rails  {
+	background-color: #C60000;
+	color: #FFFFFF;
+}
+
+.ui.label.ruby {
+	background-color: #C60000;
+	color: #FFFFFF;
+}
+
+.ui.label.csharp {
+	background-color: #0B9E0B;
+	color: #FFFFFF;
 }
