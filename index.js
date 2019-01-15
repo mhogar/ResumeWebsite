@@ -72,7 +72,7 @@ var project_page_template = `
 						<a class="ui purple icon button" href="https://github.com/mhogar/project-blog">
 							<i class="github icon"></i>
 						</a>
-						<a class="ui yellow icon button" href="http://projectblog.ryanstamp.com">
+						<a class="ui teal icon button" href="http://projectblog.ryanstamp.com">
 							<i class="globe icon"></i>
 						</a>
 					</div>
