@@ -1,5 +1,5 @@
 .banner {
-	background-image: url("imgs/banner.jpg");
+	background-image: url("imgs/banner.png");
 	background-attachment: fixed;
 
 	width: 100%;
@@ -46,4 +46,26 @@
 .ui.label.csharp {
 	background-color: #0B9E0B;
 	color: #FFFFFF;
+}
+
+.header-v1 {
+	background-color: #238AFF !important;
+	color: #FFFFFF !important;
+}
+
+.header-v2 {
+	background-color: #01AA91 !important;
+	color: #FFFFFF !important;
+}
+
+.project-links {
+	padding-left: 1em;
+}
+
+.content.header {
+	background-color: #EEEEEE !important;
+}
+
+.extra.content {
+	background-color: #EEEEEE !important;
 }

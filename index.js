@@ -1,6 +1,6 @@
 var home_page_template = `
 	<div>
-		<div class="ui blue inverted segment">
+		<div class="ui segment header-v1">
 			<h4>About Me</h4>
 		</div>
 		<p class="section-content">
@@ -9,7 +9,7 @@ var home_page_template = `
 			What I love most about coding is how open-ended it is; the only limit to what you can create is your creativity. 
 			As a very creative person, programming allows me to truly express myself.
 		</p>
-		<div class="ui blue inverted segment">
+		<div class="ui segment header-v2">
 			<h4>Interests</h4>
 		</div>
 		<p class="section-content">
@@ -19,7 +19,7 @@ var home_page_template = `
 			So much creativity goes into making these virtual worlds, and as stated above, that's how I express myself. 
 			I hope to someday make games that people will play and enjoy.
 		</p>
-		<div class="ui blue inverted segment">
+		<div class="ui segment header-v1">
 			<h4>Languages</h4>
 		</div>
 		<table class="ui center aligned very basic table">
@@ -67,17 +67,17 @@ var project_page_template = `
 		<div class="section-content">
 			<p>Below is a list of my personal projects. Use the buttons to view it on GitHub or visit the app.</p>
 			<div class="ui fluid card">
-				<div class="content">
+				<div class="content header">
 					<div class="right floated ui buttons">
-						<a class="ui icon button" href="https://github.com/mhogar/project-blog">
+						<a class="ui purple icon button" href="https://github.com/mhogar/project-blog">
 							<i class="github icon"></i>
 						</a>
-						<a class="ui icon button" href="http://mhogar-project-blog.herokuapp.com/">
+						<a class="ui yellow icon button" href="http://projectblog.ryanstamp.com">
 							<i class="globe icon"></i>
 						</a>
 					</div>
 					<div class="header">Project: Blog</div>
-					<div class="meta">
+					<div>
 						A blog style web application that allows you easily and effortlessly organize and share your projects with the community.
 					</div>
 				</div>
@@ -105,14 +105,14 @@ var project_page_template = `
 				</div>
 			</div>
 			<div class="ui fluid card">
-				<div class="content">
+				<div class="content header">
 					<div class="right floated ui buttons">
-						<a class="ui icon button" href="https://github.com/mhogar/course-scheduler">
+						<a class="ui purple icon button" href="https://github.com/mhogar/course-scheduler">
 							<i class="github icon"></i>
 						</a>
 					</div>
 					<div class="header">Course Scheduler</div>
-					<div class="meta">
+					<div>
 						A Windows form app that generates and displays all possible schedules for school classes given all the timeslots from each class.
 					</div>
 				</div>
@@ -144,7 +144,7 @@ var coop_page_template = `
 		<div class="section-content">
 			<p>Below is a list of my past work terms. Click the item to view its co-op report.</p>
 			<div class="ui large relaxed selection list">
-			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite">
+			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite1">
 				    <div class="content">
 				      <div class="header">Camis - Summer (May to August) 2018</div>
 				      <div class="description">Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request.</div>
