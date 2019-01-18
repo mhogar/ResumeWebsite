@@ -69,10 +69,10 @@ var project_page_template = `
 			<div class="ui fluid card">
 				<div class="content header">
 					<div class="right floated ui buttons">
-						<a class="ui purple icon button" href="https://github.com/mhogar/project-blog">
+						<a class="ui light grey icon button" href="https://github.com/mhogar/project-blog">
 							<i class="github icon"></i>
 						</a>
-						<a class="ui teal icon button" href="http://projectblog.ryanstamp.com">
+						<a class="ui light grey icon button" href="http://projectblog.ryanstamp.com">
 							<i class="globe icon"></i>
 						</a>
 					</div>
@@ -98,16 +98,16 @@ var project_page_template = `
 					</div>
 				</div>
 				<div class="extra content">
-					<div class="ui label rails">Rails</div>
-					<div class="ui label ruby">Ruby</div>
-					<div class="ui label html">HTML</div>
-					<div class="ui label css">CSS</div>
+					<div class="ui label light grey">Rails</div>
+					<div class="ui label light grey">Ruby</div>
+					<div class="ui label light grey">HTML</div>
+					<div class="ui label light grey">CSS</div>
 				</div>
 			</div>
 			<div class="ui fluid card">
 				<div class="content header">
 					<div class="right floated ui buttons">
-						<a class="ui purple icon button" href="https://github.com/mhogar/course-scheduler">
+						<a class="ui light grey icon button" href="https://github.com/mhogar/course-scheduler">
 							<i class="github icon"></i>
 						</a>
 					</div>
@@ -129,7 +129,7 @@ var project_page_template = `
 					</div>
 				</div>
 				<div class="extra content">
-					<div class="ui label csharp">C#</div>
+					<div class="ui label light grey">C#</div>
 				</div>
 			</div>
 		</div>

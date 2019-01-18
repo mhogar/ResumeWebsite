@@ -28,29 +28,19 @@
 	padding-bottom: 2em;
 }
 
-.ui.label.html {
-	background-color: #F1662A;
+.ui.button.light.grey {
+	background-color: #C7C9CB;
+	color: #000000;
+}
+
+.ui.button.light.grey:hover {
+	background-color: #AAAAAA;
 	color: #FFFFFF;
 }
 
-.ui.label.css {
-	background-color: #33A9DC;
-	color: #FFFFFF;
-}
-
-.ui.label.rails  {
-	background-color: #C60000;
-	color: #FFFFFF;
-}
-
-.ui.label.ruby {
-	background-color: #C60000;
-	color: #FFFFFF;
-}
-
-.ui.label.csharp {
-	background-color: #0B9E0B;
-	color: #FFFFFF;
+.ui.label.light.grey {
+	background-color: #C7C9CB !important;
+	color: #000000 !important;
 }
 
 .header-v1 {
