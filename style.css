@@ -1,14 +1,27 @@
+body {
+	background-color: #EEEEEE;
+}
+
+#wrapper {
+	max-width: 1680px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-bottom: 0;
+	padding: 0;
+
+	background-color: #FFFFFF;
+
+	min-height: 100%;
+}
+
 .banner {
 	background-image: url("imgs/banner.png");
 	background-attachment: fixed;
-
-	-webkit-background-size: contain;
-  	-moz-background-size: contain;
-  	-o-background-size: contain;
-  	background-size: contain;
+	background-position-x: center;
 
 	width: 100%;
-	min-height: 250px;
+	height: 300px;
 }
 
 .banner-header {
@@ -16,10 +29,10 @@
 	font-size: 5em !important;
 }
 
-.ui.container {
-	margin-top: 2em;
-	margin-bottom: 2em;
-	max-width: 800px !important;
+#page {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	max-width: 850px !important;
 }
 
 .section-content {
