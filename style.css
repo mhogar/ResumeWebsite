@@ -39,6 +39,8 @@ body {
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-bottom: 2em;
+
+	font-size: 15px;
 }
 
 .ui.button.light.grey {

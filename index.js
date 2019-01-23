@@ -20,14 +20,13 @@ var home_page_template = `
 			I hope to someday make games that people will play and enjoy.
 		</p>
 		<div class="ui segment header-v1">
-			<h4>Languages</h4>
+			<h4>Languages and Technologies</h4>
 		</div>
 		<table class="ui center aligned very basic table">
 			<thead>
 				<tr>
-					<th>Language</th>
+					<th>Language / Technology</th>
 					<th>Experience</th>
-					<th>Preference</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,9 +38,11 @@ var home_page_template = `
 				<LanguageTableRow name="Ruby on Rails" rating="4" preference="5" />
 				<LanguageTableRow name="HTML" rating="5" preference="3" />
 				<LanguageTableRow name="CSS" rating="3" preference="2" />
-				<LanguageTableRow name="JavaScript" rating="5" preference="4" />
+				<LanguageTableRow name="JavaScript" rating="4" preference="4" />
 				<LanguageTableRow name="PHP" rating="4" preference="4" />
 				<LanguageTableRow name="SQL" rating="4" preference="4" />
+				<LanguageTableRow name="Assembly" rating="3" />
+				<LanguageTableRow name="Git" rating="4" />
 			</tbody>
 		</table>
 	</div>
@@ -52,9 +53,6 @@ var language_table_row_template =  `
 		<td>{{name}}</td>
 		<td>
 			<div class="ui star rating" v-bind:data-rating="rating" data-max-rating="5"></div>
-		</td>
-		<td>
-			<div class="ui heart rating" v-bind:data-rating="preference" data-max-rating="5"></div>
 		</td>
 	</tr>
 `;
