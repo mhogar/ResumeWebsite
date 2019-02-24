@@ -67,6 +67,48 @@ var project_page_template = `
 			<div class="ui fluid card">
 				<div class="content header">
 					<div class="right floated ui buttons">
+						<a class="ui light grey icon button" href="https://github.com/mhogar/fractal">
+							<i class="github icon"></i>
+						</a>
+						<a class="ui light grey icon button" href="http://fractal.ryanstamp.com">
+							<i class="globe icon"></i>
+						</a>
+					</div>
+					<div class="header">Fractal</div>
+					<div>
+						A collection of small, useful apps all on one website.
+					</div>
+				</div>
+				<div class="content">
+					<div class="ui sub header">Inspiration</div>
+					<div class="description">
+						I would often have ideas for small, but useful apps and I would get very excited and motivated to start working on them. 
+						However, more often then not, I would quickly lose that motivation once I realized just how much background work it would take just to get the app to even run. 
+						There's a database and API to set up, authentication, hosting, etc. For how small the app was, it just didn't seem worth it. 
+						Eventually, I came up with the idea to create a web app that was a collection of all these app ideas. 
+						That way, I only had to do the background work once, and all the apps could tap into the same resources.
+					</div>
+					<div class="ui sub header">Description</div>
+					<div class="description">
+						Fractal itself acts as a container for the other apps. It is written in Ruby on Rails and provides the API and database structure, authentication, routing, and things like that. 
+						Fractal doesn't have much a front-end, but simply provides links to the homepages of its sub apps. These sub-apps are written in JavaScript and run on a single page. 
+						They are self-contained, but still have access to Fractal global data, such as the users. This creates a very intuitive way to add new apps to Fractal as I get new ideas. 
+						At the moment, there is only a single app, a Task Tracker to help organize your projects, although I do have a list of app ideas that I am hoping to add soon.
+					</div>
+				</div>
+				<div class="extra content">
+					<div class="ui label light grey">Rails</div>
+					<div class="ui label light grey">Ruby</div>
+					<div class="ui label light grey">HTML</div>
+					<div class="ui label light grey">CSS</div>
+					<div class="ui label light grey">JavaScript</div>
+					<div class="ui label light grey">Vue.js</div>
+				</div>
+			</div>
+			<br />
+			<div class="ui fluid card">
+				<div class="content header">
+					<div class="right floated ui buttons">
 						<a class="ui light grey icon button" href="https://github.com/mhogar/project-blog">
 							<i class="github icon"></i>
 						</a>
@@ -102,6 +144,7 @@ var project_page_template = `
 					<div class="ui label light grey">CSS</div>
 				</div>
 			</div>
+			<br />
 			<div class="ui fluid card">
 				<div class="content header">
 					<div class="right floated ui buttons">
