@@ -1,17 +1,13 @@
 var home_page_template = `
 	<div>
-		<div class="ui segment header-v1">
-			<h4>About Me</h4>
-		</div>
+		<SectionHeaderComponent :version="1" :text="'About Me'" />
 		<p class="section-content">
-			My name is Ryan Stamp and I am currently in my 3rd year at the University of Guelph pursuing a Bachelor of Computing with a Mathematics minor. 
+			My name is Ryan Stamp and I am currently in my 4th year at the University of Guelph pursuing a Bachelor of Computing with a Mathematics minor. 
 			I choose my degree program because of my love of coding and my desire to become a better programmer. 
 			What I love most about coding is how open-ended it is; the only limit to what you can create is your creativity. 
 			As a very creative person, programming allows me to truly express myself.
 		</p>
-		<div class="ui segment header-v2">
-			<h4>Interests</h4>
-		</div>
+		<SectionHeaderComponent :version="2" :text="'Interests'" />
 		<p class="section-content">
 			I try to dabble in as many different fields as I can, although my main interests lie in software security and game design. 
 			Security is essential in today's industry and I find the techniques and practices that developers use to protect their data and code very interesting. 
@@ -19,9 +15,7 @@ var home_page_template = `
 			So much creativity goes into making these virtual worlds, and as stated above, that's how I express myself. 
 			I hope to someday make games that people will play and enjoy.
 		</p>
-		<div class="ui segment header-v1">
-			<h4>Languages and Technologies</h4>
-		</div>
+		<SectionHeaderComponent :version="1" :text="'Languages and Technologies'" />
 		<table class="ui center aligned very basic table">
 			<thead>
 				<tr>
@@ -32,7 +26,7 @@ var home_page_template = `
 			<tbody>
 				<LanguageTableRow name="C" rating="5" preference="2" />
 				<LanguageTableRow name="C#" rating="4" preference="5" />
-				<LanguageTableRow name="C++" rating="3" preference="4" />
+				<LanguageTableRow name="C++" rating="4" preference="4" />
 				<LanguageTableRow name="Java" rating="4" preference="3" />
 				<LanguageTableRow name="Ruby" rating="2" preference="4" />
 				<LanguageTableRow name="Ruby on Rails" rating="4" preference="5" />
@@ -59,22 +53,20 @@ var language_table_row_template =  `
 
 var project_page_template = `
 	<div>
-		<div class="ui blue inverted segment">
-			<h4>Projects</h4>
-		</div>
+		<SectionHeaderComponent :version="1" :text="'Projects'" />
 		<div class="section-content">
 			<p>Below is a list of my personal projects. Use the buttons to view it on GitHub or visit the app.</p>
 			<div class="ui fluid card">
 				<div class="content header">
 					<div class="right floated ui buttons">
-						<a class="ui light grey icon button" href="https://github.com/mhogar/fractal">
+						<a class="ui light grey icon button" href="https://github.com/mhogar/StudentsToolshed">
 							<i class="github icon"></i>
 						</a>
-						<a class="ui light grey icon button" href="http://fractal.ryanstamp.com">
+						<a class="ui light grey icon button" href="https://mhogar-students-toolshed.herokuapp.com">
 							<i class="globe icon"></i>
 						</a>
 					</div>
-					<div class="header">Fractal</div>
+					<div class="header">Student's Toolshed</div>
 					<div>
 						A collection of small, useful apps all on one website.
 					</div>
@@ -90,10 +82,10 @@ var project_page_template = `
 					</div>
 					<div class="ui sub header">Description</div>
 					<div class="description">
-						Fractal itself acts as a container for the other apps. It is written in Ruby on Rails and provides the API and database structure, authentication, routing, and things like that. 
-						Fractal doesn't have much a front-end, but simply provides links to the homepages of its sub apps. These sub-apps are written in JavaScript and run on a single page. 
-						They are self-contained, but still have access to Fractal global data, such as the users. This creates a very intuitive way to add new apps to Fractal as I get new ideas. 
-						At the moment, there is only a single app, a Task Tracker to help organize your projects, although I do have a list of app ideas that I am hoping to add soon.
+						ST itself acts as a container for the other apps. It is written in Ruby on Rails and provides the API and database structure, authentication, routing, and things like that. 
+						ST doesn't have much a front-end, but simply provides links to the homepages of its sub apps. These sub-apps are written in JavaScript and run on a single page. 
+						They are self-contained, but still have access to ST global data, such as the users. This creates a very intuitive way to add new apps to ST as I get new ideas. 
+						At the moment, there is only a single app, a Task Tracker to help organize your projects, although I do have a list of app ideas that I am hoping to add in the future.
 					</div>
 				</div>
 				<div class="extra content">
@@ -112,7 +104,7 @@ var project_page_template = `
 						<a class="ui light grey icon button" href="https://github.com/mhogar/project-blog">
 							<i class="github icon"></i>
 						</a>
-						<a class="ui light grey icon button" href="http://projectblog.ryanstamp.com">
+						<a class="ui light grey icon button" href="https://mhogar-project-blog.herokuapp.com">
 							<i class="globe icon"></i>
 						</a>
 					</div>
@@ -179,28 +171,43 @@ var project_page_template = `
 
 var coop_page_template = `
 	<div>
-		<div class="ui blue inverted segment">
-			<h4>Co-op Work Terms</h4>
-		</div>
+		<SectionHeaderComponent :version="1" :text="'Co-op Work Terms'" />
 		<div class="section-content">
 			<p>Below is a list of my past work terms. Click the item to view its co-op report.</p>
 			<div class="ui large relaxed selection list">
-			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite1">
-				    <div class="content">
-				      <div class="header">Camis - Summer (May to August) 2018</div>
-				      <div class="description">Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request.</div>
-				    </div>
-			  	</a>
-			  	<a class="item" href="http://www.ryanstamp.com/CoopWebsite2">
-				    <div class="content">
-				      <div class="header">Tulip Retail - Fall (September to December) 2018</div>
-				      <div class="description">Implemented new features for the clienteling app. Primarily worked on the back-end, creating endpoints and database migrations.</div>
-				    </div>
-			  	</a>
+        <a class="item" href="http://www.ryanstamp.com/CoopWebsite1">
+          <div class="content">
+            <div class="header">Camis - Summer (May to August) 2018</div>
+            <div class="description">Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request.</div>
+          </div>
+        </a>
+        <a class="item" href="http://www.ryanstamp.com/CoopWebsite2">
+          <div class="content">
+            <div class="header">Tulip Retail - Fall (September to December) 2018</div>
+            <div class="description">Implemented new features for the clienteling app. Primarily worked on the back-end, creating endpoints and database migrations.</div>
+          </div>
+        </a>
+        <a class="item" href="http://www.ryanstamp.com/CoopWebsite3">
+          <div class="content">
+            <div class="header">Natrual Resources Canada - Summer (May to August) 2019</div>
+            <div class="description">Developed solutions from scratch to convert 3D geological datasets into the 3D Tiles formats. These new tiles were then rendered on the web using the CesiumJS JavaScript library.</div>
+          </div>
+        </a>
 			</div>
 		</div>
 	</div>
 `;
+
+var sectionHeaderComponent = {
+	props: ['version', 'text'],
+	template: `
+	<div class="ui raised segments">
+		<div :class="'ui segment header-v' + version">
+			<h4>{{text}}</h4>
+		</div>
+	</div>
+	`
+};
 
 var vue = new Vue({
 	el: '#page',
@@ -211,16 +218,23 @@ var vue = new Vue({
 		'home': {
 			template: home_page_template,
 			components: {
-				'LanguageTableRow': {
+				SectionHeaderComponent: sectionHeaderComponent,
+				LanguageTableRow: {
 					props: ['name', 'rating', 'preference'],
 					template: language_table_row_template
 				}
 			}
 		},
 		'projects': {
+			components: {
+				SectionHeaderComponent: sectionHeaderComponent,
+			},
 			template: project_page_template
 		},
 		'coop': {
+			components: {
+				SectionHeaderComponent: sectionHeaderComponent,
+			},
 			template: coop_page_template
 		}
 	},
@@ -242,5 +256,3 @@ var vue = new Vue({
 		this.onPageSwitch();
 	}
 });
-
-

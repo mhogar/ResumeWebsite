@@ -29,6 +29,10 @@ body {
 	font-size: 5em !important;
 }
 
+.banner.bottom {
+	background-position-y: bottom;
+}
+
 #page {
 	padding-top: 2em;
 	padding-bottom: 2em;
