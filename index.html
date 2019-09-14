@@ -17,33 +17,29 @@
 	  		<div class="ui inverted header center aligned banner-header">Ryan Stamp</div>
 	  	</div>
 	  	<div id="page" class="ui container">
-		  	<div class="ui basic segment">
-				<div class="ui left attached rail">
-					<div class="ui basic segment">
-				    	<div class="ui vertical pointing menu">
-				    		<a id="home-item" class="item active" v-on:click="menuItemClicked('home')">Home</a>
-							<a id="projects-item" class="item" v-on:click="menuItemClicked('projects')">Projects</a>
-							<a id="coop-item" class="item" v-on:click="menuItemClicked('coop')">Co-op Work Terms</a>
-						</div>
-						<a class="ui purple labeled icon button" href="https://github.com/mhogar">
-							<i class="github icon"></i> GitHub
-						</a>
-						<!--a class="ui blue labeled icon button" href="https://www.linkedin.com/in/ryan-stamp-a91020152/">
-							<i class="linkedin icon"></i> LinkedIn
-						</a-->
-				    </div>
+			<div class="ui tabular menu">
+				<a id="home-item" class="item active" v-on:click="menuItemClicked('home')">Home</a>
+				<a id="projects-item" class="item" v-on:click="menuItemClicked('projects')">Projects</a>
+				<a id="coop-item" class="item" v-on:click="menuItemClicked('coop')">Co-op Work Terms</a>
+				<div class="right menu">
+					<a class="item" href="https://github.com/mhogar">
+						<i class="github icon"></i> GitHub
+					</a>
+					<a class="item" href="https://www.linkedin.com/in/ryan-stamp-a91020152/">
+						<i class="linkedin icon"></i> LinkedIn
+					</a>
 				</div>
-			  	<transition
-				    name="page-content-transitions"
-				    v-on:enter="onPageSwitch"
-				    enter-active-class="animated fadeInRight fast"
-				    leave-active-class="animated fadeOutRight fast"
-				    mode="out-in"
-					>
-				  	<component v-bind:is="page"></component>
-				</transition>
 			</div>
-	  	</div>
+			<transition
+				name="page-content-transitions"
+				v-on:enter="onPageSwitch"
+				enter-active-class="animated fadeInRight fast"
+				leave-active-class="animated fadeOutRight fast"
+				mode="out-in"
+				>
+				<component v-bind:is="page"></component>
+			</transition>
+		</div>
 	</div>
 	<div class="banner bottom"></div>
   	<script src="index.js"></script>
