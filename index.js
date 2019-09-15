@@ -57,7 +57,7 @@ var project_page_template = `
 var coop_page_template = `
 	<div>
 		<div class="section-content">
-			<p>Below is a list of my past work terms. Click the item to view its co-op report.</p>
+			<p>Below is a list of my past work terms. Click the item to view its co-op report website.</p>
 			<div class="ui large relaxed selection list">
         <a class="item" href="http://www.ryanstamp.com/CoopWebsite1">
           <div class="content">
@@ -117,7 +117,7 @@ var projectCardComponent = {
 			<a v-if="options.github" class="ui icon button" :href="options.github">
 				<i class="github icon"></i> View it on Github
 			</a>
-			<a v-if="options.website" class="ui icon button" :href="options.website">
+			<a v-if="options.appWebsite" class="ui icon button" :href="options.appWebsite">
 				<i class="globe icon"></i> View the App
 			</a>
 		</div>
@@ -152,8 +152,16 @@ var vue = new Vue({
 				return {
 					projectCards: [
 						{
+							github: "https://github.com/mhogar/Blueprint",
+							name: "Blueprint (name WIP)",
+							headerText: "Class Scaffold Generator",
+							inspiration: "When writing classes, I often plan it out on paper first, deciding on functions and variables. However, the actual process of converting it into code is tedious and repetitive. This becomes more annoying if working with multiple languages as you must remember how a specific language implements classes. For example, C# has a data type for class properties. C++ does not, but it can still be implemented using getter and setter methods. C does not support classes, but it can be “faked” using structs and functions. The same basic concepts exist across these languages, but their exact implementation differs. By using Blueprint, you can create the class structure once in the blueprint file and automatically generate the associated code for multiple languages. Doing it this way, you can avoid getting caught up in how a language implements a concept and focus on the class structure itself.",
+							description: "Blueprint is a command-line application that parses a special XML file called a blueprint file and uses it to create the files and classes in one of multiple languages. The blueprint file describes the classes to be built by defining things like what properties, variables, and functions the class has. The parser will check the input file against an XML schema to verify it is of a valid format. Once the blueprint file has been parsed, Blueprint can then create the files and classes in the selected language.",
+							langTags: ["C#", "XML", "XML Schema"]
+						},
+						{
 							github: "https://github.com/mhogar/StudentsToolshed",
-							website: "https://mhogar-students-toolshed.herokuapp.com",
+							appWebsite: "https://mhogar-students-toolshed.herokuapp.com",
 							name: "Student's Toolshed",
 							headerText: "A collection of small, useful apps all on one website.",
 							inspiration: "I would often have ideas for small, but useful apps and I would get very excited and motivated to start working on them. However, more often then not, I would quickly lose that motivation once I realized just how much background work it would take just to get the app to even run. There's a database and API to set up, authentication, hosting, etc. For how small the app was, it just didn't seem worth it. Eventually, I came up with the idea to create a web app that was a collection of all these app ideas. That way, I only had to do the background work once, and all the apps could tap into the same resources.",
@@ -161,8 +169,16 @@ var vue = new Vue({
 							langTags: ["Rails", "Ruby", "HTML", "CSS", "JavaScript", "Vue.js"]
 						},
 						{
+							github: "https://github.com/mhogar/StudyPresGenerator",
+							name: "Study Pres Generator",
+							headerText: "A simple command line ruby application for creating flashcard study presentations",
+							inspiration: "I find flashcards to be an effective method of studying, however, there is a physical cost to creating them. In order to remove this cost, I decided to make a digital version of the flashcards.",
+							description: "The application is a ruby script that reads the questions and answers from a JSON file and then uses embedded ruby (ERB) to create a LaTeX file. This LaTeX file is then compiled into a presentation PDF for studying with. Additionally, some other processing can be performed on the questions and answers before creating the template, such as randomizing the question order. The application itself has a command-line interface with various flags for configuring things such as the input file, output directory, whether or not to randomize the questions, output verbosity level, etc.",
+							langTags: ["Ruby", "Embeded Ruby (ERB)", "LaTeX", "JSON"]
+						},
+						{
 							github: "https://github.com/mhogar/project-blog",
-							website: "https://mhogar-project-blog.herokuapp.com",
+							appWebsite: "https://mhogar-project-blog.herokuapp.com",
 							name: "Project: Blog",
 							headerText: "A blog style web application that allows you easily and effortlessly organize and share your projects with the community.",
 							inspiration: "Before making this app, I had only been working with a lot of system-based languages: C#, C++, etc. and I wanted to branch out and try a new field of computer science. I wanted to dabble in web programming so choose Ruby on Rails as the framework because it is easy to learn and has a great community. After working with Rails for a bit, I wanted to create a web app to showcase my skills. It was then that I realized that I could also use this web app to showcase some of my other projects. So, I created Project: Blog, a web application that allows you to organize and share your projects.",
