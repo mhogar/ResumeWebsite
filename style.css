@@ -47,16 +47,6 @@ body {
 	font-size: 15px;
 }
 
-.ui.button.light.grey {
-	background-color: #C7C9CB;
-	color: #000000;
-}
-
-.ui.button.light.grey:hover {
-	background-color: #AAAAAA;
-	color: #FFFFFF;
-}
-
 .ui.label.light.grey {
 	background-color: #C7C9CB !important;
 	color: #000000 !important;
@@ -76,8 +66,18 @@ body {
 	padding-left: 1em;
 }
 
-.content.header {
-	background-color: #EEEEEE !important;
+.content.header.v1 {
+	background-color: #238AFF !important;
+	color: #FFFFFF !important;
+}
+
+.content.header.v2 {
+	background-color: #01AA91 !important;
+	color: #FFFFFF !important;
+}
+
+.project.card.header {
+	color: #FFFFFF !important;
 }
 
 .extra.content {
