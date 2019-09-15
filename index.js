@@ -58,7 +58,11 @@ var coop_page_template = `
 	<div>
 		<div class="section-content">
 			<p>Below is a list of my past work terms. Click the item to view its co-op report website.</p>
-			<div class="ui large relaxed selection list">
+			<div v-for="(workTermCard, index) in workTermCards" :key="index">
+				<WorkTermCardComponent :version="(index % 2) + 1" :options="workTermCard" />
+				<br />
+			</div>
+			<!--div class="ui large relaxed selection list">
         <a class="item" href="http://www.ryanstamp.com/CoopWebsite1">
           <div class="content">
             <div class="header">Camis - Summer (May to August) 2018</div>
@@ -77,7 +81,7 @@ var coop_page_template = `
             <div class="description">Developed solutions from scratch to convert 3D geological datasets into the 3D Tiles formats. These new tiles were then rendered on the web using the CesiumJS JavaScript library.</div>
           </div>
         </a>
-			</div>
+			</div-->
 		</div>
 	</div>
 `;
@@ -108,29 +112,42 @@ var languageTableRowComponent = {
 var projectCardComponent = {
 	props: ['version', 'options'],
 	template: `
-	<div class="ui fluid raised card">
-		<div :class="'content header v' + version">
-			<div class="project card header">{{options.name}}</div>
-			<div>{{options.headerText}}</div>
+		<div class="ui fluid raised card">
+			<div :class="'content header v' + version">
+				<div class="project card header">{{options.name}}</div>
+				<div>{{options.headerText}}</div>
+			</div>
+			<div class="content">
+				<a v-if="options.github" class="ui icon button" :href="options.github">
+					<i class="github icon"></i> View it on Github
+				</a>
+				<a v-if="options.appWebsite" class="ui icon button" :href="options.appWebsite">
+					<i class="globe icon"></i> View the App
+				</a>
+			</div>
+			<div class="content">
+				<div class="ui sub header">Inspiration</div>
+				<div class="description">{{options.inspiration}}</div>
+				<div class="ui sub header">Description</div>
+				<div class="description">{{options.description}}</div>
+			</div>
+			<div class="extra content">
+				<div class="ui label light grey" v-for="(langTag, index) in options.langTags" :key="index">{{langTag}}</div>
+			</div>
 		</div>
-		<div class="content">
-			<a v-if="options.github" class="ui icon button" :href="options.github">
-				<i class="github icon"></i> View it on Github
-			</a>
-			<a v-if="options.appWebsite" class="ui icon button" :href="options.appWebsite">
-				<i class="globe icon"></i> View the App
-			</a>
-		</div>
-		<div class="content">
-			<div class="ui sub header">Inspiration</div>
-			<div class="description">{{options.inspiration}}</div>
-			<div class="ui sub header">Description</div>
-			<div class="description">{{options.description}}</div>
-		</div>
-		<div class="extra content">
-			<div class="ui label light grey" v-for="(langTag, index) in options.langTags" :key="index">{{langTag}}</div>
-		</div>
-	</div>
+	`
+}
+
+var workTermCardComponent = {
+	props: ['version', 'options'],
+	template: `
+		<a class="ui fluid link card" :href="options.website">
+			<div :class="'content header v' + version">
+				<div class="project card header">{{options.companyName}} - {{options.jobTitle}}</div>
+					<div>{{options.date.startMonth}} to {{options.date.endMonth}} {{options.date.year}}</div>
+				</div>
+			<div class="content">{{options.description}}</div>
+		</a>
 	`
 }
 
@@ -203,8 +220,48 @@ var vue = new Vue({
 			template: project_page_template
 		},
 		'coop': {
+			data: function() {
+				return {
+					workTermCards: [
+						{
+							website: "http://www.ryanstamp.com/CoopWebsite1",
+							companyName: "Camis",
+							jobTitle: "Developer Co-op",
+							date: {
+								startMonth: "May",
+								endMonth: "August",
+								year: 2018
+							},
+							description: "Maintained Camis' older Everest software by fixing bugs, updating configuration, and implementing changes as per the clients' request."
+						},
+						{
+							website: "http://www.ryanstamp.com/CoopWebsite2",
+							companyName: "Tulip Retail",
+							jobTitle: "Full Stack Developer",
+							date: {
+								startMonth: "September",
+								endMonth: "December",
+								year: 2018
+							},
+							description: "Implemented new features for the clienteling app. Primarily worked on the back-end, creating endpoints and database migrations."
+						},
+						{
+							website: "http://www.ryanstamp.com/CoopWebsite3",
+							companyName: "Natural Resources Canada",
+							jobTitle: "3D Web Visualization Canada-3D Support",
+							date: {
+								startMonth: "May",
+								endMonth: "August",
+								year: 2019
+							},
+							description: "Developed solutions from scratch to convert 3D geological datasets into the 3D Tiles formats. These new tiles were then rendered on the web using the CesiumJS JavaScript library."
+						}
+					]
+				}
+			},
 			components: {
-				SectionHeaderComponent: sectionHeaderComponent
+				SectionHeaderComponent: sectionHeaderComponent,
+				WorkTermCardComponent: workTermCardComponent
 			},
 			template: coop_page_template
 		}
